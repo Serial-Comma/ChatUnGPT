@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ChatUnGPT</title>
+    </head>
+    <body>
+        <div id="message_display">
+            <ul>
+            {% for message in messages %}
+            <li>{{message}}</li>
+            {% endfor %}
+            </ul>
+        </div>
+        <div id="message-input">
+            <form action="/send" method="POST">
+                <input type="text" name="message" placeholder="Enter your message here">
+                <input type="submit" value="Submit">
+            </form>
+
+        </div>
+    </body>
+</html>
